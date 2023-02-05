@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%} category {% endblock title %}
+
+{% block main-content %}
+  <div class= "contianer">
+    <div class="row flex justify-cntent-between" >
+      <div class="img2 col-lg-5 mt-4">
+        <h1>Scroll down for surprises</h1>
+        <img src="{{productss.prod_img.url}}"  class="image col-xs-6 col=sm-12 col-lg-12 text-sm-center  w-90 h-70" style="margin: 10%;"/>
+      </div>
+      <div class= product_detailes col-lg-5>
+        <h1 style="text-transform: capitalize; font-size: 50px; text-align: center;">{{productss.title}}</h1>
+        <p style="font-size: x-large;"> Discounted Price : Rs.{{productss.discounted_price}}/-</p>
+        <small class = "fw-light text-decoration-line-through" style="font-size: x-large;">   Rs.{{productss.selling_price}}/-</small>
+        <p style="font-size: x-large;"> {{productss.desc}}</p>
+      </div>
+      <div class = "buttons row flex" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <button type="submit" class = "d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg">Add to Cart</button>
+        <div class = "d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg"> 
+          <a href="{ url 'showCart' %}" class="text-decoration-nono">
+            Buy now
+
+          </a>
+        </div>
+
+
+      </div>
+       
+    </div>
+
+  </div>
+{% endblock main-content %}

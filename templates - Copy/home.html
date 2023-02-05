@@ -1,0 +1,139 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title%} HOME {% endblock %}
+
+{% block banner_slider %}
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="width: 30%;">
+        <img src="{% static 'ecomapp\images\banner\b8.jpg' %}"    class="d-block w-100" alt="..." >  >
+        <div class="carousel-caption d-none d-md-block">
+       
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item" style="width: 30%; ">
+        <img src="{% static 'ecomapp\images\banner\b4.jpg' %}" class="d-block w-100" alt="...">  
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      
+      <div class="carousel-item aria-current" style="width: 30%;" >
+        <img src="{% static 'ecomapp\images\banner\b3.jpg' %}" class="d-block w-100" alt="...">  
+        <div class="carousel-caption d-none d-md-block">
+        
+        </div>
+    
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+</div>
+
+
+    
+</div>
+{% endblock banner_slider %}
+
+{% block info %}
+<div class="container">
+    <div class=" row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1> WHAT IS BIGBULL ?</h1>
+        <small class="fs-5">BIGBULL is a startup by passionate stock market geeks which offers a wide range of stock market products. These products include variety of stock market goodies from t-shirts to books. It is best place for a passionate stock market geek to buy and enjoy the site by their own profit </small>
+    
+    </div>
+</div>
+{% endblock info%}
+
+{% block main-content %}
+</br>
+</br>
+<div class = "container" >
+  <h1 class = "text-center " >Products</h1>
+  </br></br>
+  <div class=" row container">
+    <div class="col-md-4 col-sm-4  mi-go wow fadeInUp data-wow-duration = 'ls'; data-wow-delay = '0.6s';">
+      <div class= " text-center" >
+        <a href="{% url 'category' 'TS' %}">
+        <img src="{% static 'ecomapp\images\cow-ghee.png'%}/" class="img-responsive">
+        <p class="">T_SHIRT</p>
+      </div>
+        </a>
+    </div>
+  
+  
+  <div class="col-md-4 col-sm-4  mi-go wow fadeInUp data-wow-duration = 'ls'; data-wow-delay = '0.6s';">
+    <div class= " text-center" >
+      <a href="{% url 'category' 'HO' %}">
+      <img src="{% static 'ecomapp\images\download (3).jpg'%}/" class="img-responsive">
+      <p class="noidea">HOODIE</p>
+    </div>
+      </a>
+  </div>
+
+  <div class="col-md-4 col-sm-4  mi-go wow fadeInUp data-wow-duration = 'ls'; data-wow-delay = '0.6s';">
+    <div class= " text-center" >
+      <a href="{% url 'category' 'TS' %}">
+      <img src="{% static 'ecomapp\images\curd-premium.png'%}/" class="img-responsive">
+      <p class="noidea">WARMER</p>
+    </div>
+      </a>
+  </div> 
+</div>
+
+
+</br><br>
+<div class=" row container">
+  <div class="col-md-4 col-sm-4  mi-go wow fadeInUp data-wow-duration = 'ls'; data-wow-delay = '0.6s';">
+        <div class= " text-center" >
+          <a href="{% url 'category' 'GA' %}">
+          <img src="{% static 'ecomapp\images\download (7).jpg' %}/" class="img-responsive" style="height: 10%;">
+          <p class="">GAMES</p>
+        </div>
+          </a>
+  </div>
+    
+    
+    <div class="col-md-4 col-sm-4  mi-go wow fadeInUp data-wow-duration = 'ls'; data-wow-delay = '0.6s';">
+      <div class= " text-center" >
+        <a href="{% url 'category' 'PO' %}">
+        <img src="{% static 'ecomapp\images\jjjj.webp'%}/" class="img-responsive">
+        <p class="noidea">DIARY</p>
+      </div>
+         </a>
+    </div>
+  
+    <div class="col-md-4 col-sm-5  ; data-wow-delay = '0.6s';">
+      <div class= " text-center" >
+        <a href="{% url 'category' 'BO' %}">
+        <img src="{% static 'ecomapp\images\yy.jpg'%}/" class="img-responsive">
+        <p class="noidea">BOOKS</p>
+      </div>
+        </a>
+    </div>
+    
+
+</div>
+
+{% endblock main-content %}
+
+
